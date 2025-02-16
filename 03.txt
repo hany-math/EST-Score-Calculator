@@ -1,0 +1,19 @@
+function calculateScore() {
+    // Get values from input fields
+    const gpa = parseInt(document.getElementById('gpaScore').value);
+    const sat1 = parseInt(document.getElementById('sat1Score').value);
+    const sat2 = parseInt(document.getElementById('sat2Score').value);
+
+    // Validate inputs
+    if (isNaN(gpa) || isNaN(sat1) || isNaN(sat2)) {
+        alert("Please enter valid values for all fields.");
+        return;
+    }
+
+    // Calculate GPA score (out of 40)
+    const gpaScore = gpa;
+
+    // Calculate SAT 1 score based on the rules
+    let sat1Score;
+    if (sat1 >= 1090) {
+        sat1Score = (sat1 / 1600) * 69; // If SAT 1 >= 1090
